@@ -135,6 +135,7 @@ class music_cog(commands.Cog):
             if voice_channel is None:
                 ctx.send("Connect to a voice channel!")
             else:
+                 self.music_queue.clear()
                  self.vc.stop()
                  await  self.vc.disconnect()
     
