@@ -51,10 +51,10 @@ class music_cog(commands.Cog):
             
             #try to connect to voice channel if you are not already connected
 
-            if self.vc == "" or not self.vc.is_connected() or self.vc == None:
-                self.vc = await self.music_queue[0][1].connect()
-            else:
-                await self.vc.move_to(self.music_queue[0][1])
+            #if self.vc == "" or not self.vc.is_connected() or self.vc == None:
+            self.vc = await self.music_queue[0][1].connect()
+            #else:
+            #    await self.vc.move_to(self.music_queue[0][1])
             
             print(self.music_queue)
             #remove the first element as you are currently playing it
